@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/senderLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="보낸사람"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/timeTextView"
+        app:layout_constraintEnd_toStartOf="@id/senderTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageTextView" />
+
+    <TextView
+        android:id="@+id/senderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/senderLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageTextView"
+        app:layout_constraintBottom_toTopOf="@id/timeTextView"
+        tools:text="NICKNAME" />
+
+    <TextView
+        android:id="@+id/messageContentLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="메시지내용"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/senderTextView"
+        app:layout_constraintEnd_toStartOf="@id/messageTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/senderTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/messageContentLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="MESSAGE" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="시간"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/timeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/senderTextView" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/timeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/senderTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="TIME" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
